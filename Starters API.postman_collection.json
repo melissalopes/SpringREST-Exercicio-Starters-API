@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "ad508e56-f521-4376-8abd-470f1ebb04f6",
+		"name": "Starters API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Starter",
+			"item": [
+				{
+					"name": "Listar Starters",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG9zIHN0YXJ0ZXJzIiwic3ViIjoiMSIsImlhdCI6MTYyMTc4ODU5MSwiZXhwIjoxNjIxODc0OTkxfQ.lsW7YxUb7vxOCuQbzzAj4lJUR23vh0fLciJQGcWnQqs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/starters?page=1&size=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"starters"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Starter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"João\",\r\n    \"email\" : \"joao@gft.com\",\r\n    \"fourLetters\" : \"jsct\",\r\n    \"telefone\" : \"11984467342\",\r\n    \"linguagem\" : \"dot net\",\r\n    \"endereco\" : {\r\n        \"logradouro\" : \"algum lugar\",\r\n        \"numero\" : \"0\",\r\n        \"complemento\" : \"0\",\r\n        \"bairro\" : \"é lá mesmo\",\r\n        \"cep\" : \"09876543\",\r\n        \"cidade\" : \"essa\",\r\n        \"estado\" : \"mesma\"\r\n    }   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/starters",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"starters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Starters Pelo Código",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/starters/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"starters",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Starter",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/starters/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"starters",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Starter",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"nome\": \"Marcela\",\r\n        \"email\": \"marcela@gft.com\",\r\n        \"fourLetters\": \"mrte\",\r\n        \"telefone\": \"66778933652\",\r\n        \"linguagem\": \"java\",\r\n        \"endereco\": {\r\n            \"logradouro\": \"neste lugar\",\r\n            \"numero\": \"1\",\r\n            \"complemento\": \"1\",\r\n            \"bairro\": \"é aqui mesmo\",\r\n            \"cep\": \"12345678\",\r\n            \"cidade\": \"não\",\r\n            \"estado\": \"sabemos\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/starters/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"starters",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Desafio",
+			"item": [
+				{
+					"name": "Listar Desafios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG9zIHN0YXJ0ZXJzIiwic3ViIjoiMSIsImlhdCI6MTYyMTc4ODU5MSwiZXhwIjoxNjIxODc0OTkxfQ.lsW7YxUb7vxOCuQbzzAj4lJUR23vh0fLciJQGcWnQqs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/desafios?page=1&size=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafios"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Desafio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeDesafio\" : \"Spring MVC - Imobiliária\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/desafios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Desafios Pelo Código",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG9zIHN0YXJ0ZXJzIiwic3ViIjoiMSIsImlhdCI6MTYyMTY0NDg1MywiZXhwIjoxNjIxNzMxMjUzfQ.lLAiNRBXgSFqusybjLt0-lG1rJ4u7sGS-Lu4ShFgpKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/desafios/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Desafio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/desafios/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafios",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Desafio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeDesafio\" : \"Spring MVC - Cartório\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/desafios/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Submissão de Desafios",
+			"item": [
+				{
+					"name": "Listar Submissões",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG9zIHN0YXJ0ZXJzIiwic3ViIjoiMSIsImlhdCI6MTYyMTc4ODY5NCwiZXhwIjoxNjIxODc1MDk0fQ.IfaKMNIHFZZ8DgnOhziE8QFfj_D7KpLVv783JoRmgVk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/submissoes?page=0&size=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submissoes"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Submissão",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG9zIHN0YXJ0ZXJzIiwic3ViIjoiMiIsImlhdCI6MTYyMTc4ODUzMCwiZXhwIjoxNjIxODc0OTMwfQ.iX0H313REKk69B8_oAKUfldwvchQsLgCga9t1n-Kmpw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"endereco_repositorio\" : \"novo link\",\r\n    \"starter\" : {\r\n        \"codigo\" : 2\r\n    },\r\n    \"desafio\" : {\r\n        \"codigo\" : 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/submissoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submissoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Submissões Pelo Código",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/submissoes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submissoes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Submissão",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/submissoes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submissoes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Submissão",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"endereco_repositorio\" : \"gitlab link\",\r\n    \"starter\" : {\r\n        \"codigo\" : 1\r\n    },\r\n    \"desafio\" : {\r\n        \"codigo\" : 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/submissoes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submissoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nota Desafio",
+			"item": [
+				{
+					"name": "Listar Notas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG9zIHN0YXJ0ZXJzIiwic3ViIjoiMSIsImlhdCI6MTYyMTY0NDg1MywiZXhwIjoxNjIxNzMxMjUzfQ.lLAiNRBXgSFqusybjLt0-lG1rJ4u7sGS-Lu4ShFgpKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG9zIHN0YXJ0ZXJzIiwic3ViIjoiMSIsImlhdCI6MTYyMTY0NDQ2OSwiZXhwIjoxNjIxNzMwODY5fQ.GHh7EBv9FUTjJKJZ8EYMibwIiT-p0q41IkkggO18F0Q",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/notas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Nota Desafio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"notaQualidadeCodigo\" : \"TRES\",\r\n    \"notaQtdEntregada\" : \"TRES\",\r\n    \"submissaoDesafios\" : {\r\n        \"codigo\" : 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/notas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Notas Pelo Código",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/notas/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Notas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/notas/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Notas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"notaQualidadeCodigo\" : \"TRES\",\r\n    \"notaQtdEntregada\" : \"TRES\",\r\n    \"submissaoDesafios\" : {\r\n        \"codigo\" : 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/notas/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gerar Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"instrutor@gft.com\",\r\n    \"senha\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
